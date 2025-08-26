@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pawiwahan - Gus Anom & Ode</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Great+Vibes&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Transition Screen -->
+    <div class="transition-screen" id="transitionScreen">
+        <div class="transition-content">
+            <h2>Gus & Ode</h2>
+            <p>Memuat undangan...</p>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Cover Page -->
+    <div id="cover-page" class="page active">
+        <div class="overlay"></div>
+        <div class="particles" id="particles"></div>
+        
+        <div class="content" id="invitationContent">
+            <div class="floral-decoration">
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-leaf"></i>
+            </div>
+            <h2>Om Swastyastu</h2>
+            <h1>Pawiwahan</h1>
+            <div class="names">Gus Anom & Ode</div>
+            <div class="floral-decoration">
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-leaf"></i>
+            </div>
+            <p>Kepada Bapak/Ibu/Saudara/i</p>
+            <div class="guest" id="guestName">Nama Tamu</div>
+            <p><small>Mohon maaf apabila ada kesalahan pada penulisan nama/gelar</small></p>
+            
+            <div class="date-badge">
+                <i class="fas fa-calendar-days"></i>
+                <span>18 September 2025</span>
+            </div>
+            
+            <button class="btn" id="openInvitation">
+                <i class="fas fa-envelope-open-text"></i> Buka Undangan
+            </button>
+        </div>
+
+        <!-- Origami Bird Container -->
+        <div class="origami-container" id="origamiContainer">
+            <div class="origami-bird" id="origamiBird">
+                <div class="paper-fold fold-1"></div>
+                <div class="paper-fold fold-2"></div>
+                <div class="paper-fold fold-3"></div>
+            </div>
+        </div>
+
+        <div class="instruction" id="instruction">
+            Klik untuk membuka undangan
+        </div>
+    </div>
+
+    <!-- Main Content Page -->
+    <div id="main-content" class="page">
+        <!-- Background Interaktif -->
+        <div class="interactive-bg" id="interactiveBg"></div>
+        
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <!-- Navbar -->
+        <nav class="navbar" id="navbar">
+            <div class="navbar-container">
+                <a href="#home" class="navbar-logo">Gus Anom & Ode</a>
+                <ul class="navbar-menu" id="navbarMenu">
+                    <li><a href="#home" class="navbar-link">Home</a></li>
+                    <li><a href="#couple" class="navbar-link">Profil</a></li>
+                    <li><a href="#gallery" class="navbar-link">Galeri</a></li>
+                    <li><a href="#details" class="navbar-link">Acara</a></li>
+                    <li><a href="#pesan" class="navbar-link">Ucapan</a></li>
+                </ul>
+                <div class="navbar-toggle" id="navbarToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Floating Action Buttons -->
+        <div class="floating-action no-print">
+            <div class="floating-btn" onclick="scrollToTop()">
+                <i class="fas fa-arrow-up"></i>
+            </div>
+            <div class="floating-btn" onclick="shareInvitation()">
+                <i class="fas fa-share-alt"></i>
+            </div>
+        </div>
+
+        <!-- HERO SECTION -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="animate-fade-in-up">
+                    <div style="margin-bottom: 1.5rem;">
+                        <span class="pill">
+                            <i class="fas fa-sparkle"></i>
+                            Pawiwahan
+                        </span>
+                    </div>
+                    
+                    <h1>Om Swastyastu</h1>
+                    
+                    <div class="divider">
+                        <svg width="52" height="12" viewBox="0 0 52 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M26 0c1.6 3.4 5 6 9 6s7.4-2.6 9-6c-1.6 5.6-6.2 10-11.6 10H19.6C14.2 10 9.6 5.6 8 0c1.6 3.4 5 6 9 6s7.4-2.6 9-6Z" fill="#d4af37"/>
+                        </svg>
+                    </div>
+                    
+                    <p style="margin-top: 1rem; max-width: 42rem; margin-left: auto; margin-right: auto; color: var(--muted);">
+                        Atas asung kertha wara nugraha Ida Sang Hyang Widhi Wasa, kami mengundang Bapak/Ibu/Saudara/i untuk hadir memberikan doa restu pada pawiwahan kami.
+                    </p>
+                    
+                    <div style="margin-top: 2.5rem;">
+                        <h2 class="animate-fade-in delay-200">
+                            Gus Anom <span style="color: var(--gold);">&</span> Ode
+                        </h2>
+                        <p style="margin-top: 0.75rem; color: var(--muted); display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                            <i class="fas fa-calendar-days"></i>
+                            18 September 2025
+                        </p>
+                    </div>
+                    
+                    <!-- COUNTDOWN -->
+                    <div class="countdown">
+                        <div class="countdown-item">
+                            <div class="countdown-value" id="days">00</div>
+                            <div class="countdown-label">Hari</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-value" id="hours">00</div>
+                            <div class="countdown-label">Jam</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-value" id="minutes">00</div>
+                            <div class="countdown-label">Menit</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-value" id="seconds">00</div>
+                            <div class="countdown-label">Detik</div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 2.5rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem;">
+                        <a href="#couple" class="btn">
+                            <i class="fas fa-heart"></i> Profil Mempelai
+                        </a>
+                        <a href="#details" class="btn">
+                            <i class="fas fa-info-circle"></i> Detail Acara
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll down indicator -->
+            <div class="scroll-down no-print" onclick="scrollToSection('couple')">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- COUPLE INFO SECTION -->
+        <section class="bg-section bg-1" id="couple">
+            <div class="container">
+                <h2 class="section-title">Profil Mempelai</h2>
+                
+                <div class="couple-container">
+                    <div class="card couple-card animate-fade-in-up">
+                        <img src="gambar/profil-1.jpg" alt="Ida Bgs Pt Anom Wistika Manuaba" class="couple-photo">
+                        <h3 class="couple-name">Gus Anom</h3>
+                        <div class="couple-details">
+                            <p>Putra pertama dari pasangan</p>
+                            <p><strong>Ida Bagus xxxx xxxxxx & Ida Ayu xxxx xxxx</strong></p>
+                            <div class="parents-info">
+                                <p>Denpasar</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card couple-card animate-fade-in-up delay-200">
+                        <img src="gambar/profil-2.jpg" alt="Ni Luh Gede Budi Lestari" class="couple-photo">
+                        <h3 class="couple-name">Ode</h3>
+                        <div class="couple-details">
+                            <p>Putri pertama dari pasangan</p>
+                            <p><strong>I Made xxxx & I Made xxxx</strong></p>
+                            <div class="parents-info">
+                                <p>Denpasar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kutipan Weda -->
+                <div class="veda-quote animate-fade-in-up delay-400">
+                    <p>"Ihaiva stam ma vi yaustam, visvam ayur vyasnutam, kridantau putrair naptrbhih, modamanau sve grhe."</p>
+                    <p class="source">(Rg Veda X.85.42)</p>
+                    <p>Wahai pasangan suami-istri, semoga kalian tetap bersatu dan tidak pernah terpisahkan. Semoga kalian mencapai hidup penuh kebahagiaan, tinggal di rumah yang penuh kegembiraan bersama seluruh keturunanmu.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DETAILS SECTION -->
+        <section class="bg-section bg-3" id="details">
+            <div class="container">
+                <h2 class="section-title">Detail Acara</h2>
+                
+                <div class="details-grid">
+                    <div class="card frame animate-fade-in-up">
+                        <div class="detail-card">
+                            <i class="fas fa-calendar-days"></i>
+                            <div>
+                                <h3>Rahina</h3>
+                                <p>Senin, 18 September 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card frame animate-fade-in-up delay-200">
+                        <div class="detail-card">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h3>Waktu</h3>
+                                <p>Upacara Pawiwahan: 09.00 - 16.00 WITA<br>Resepsi: 18.00 - 22.00 WITA</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card frame animate-fade-in-up delay-400">
+                        <div class="detail-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Lokasi</h3>
+                                <p>Jl. 10 Denpasar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!-- MAP SECTION -->
+                <section class="bg-section bg-4">
+                    <div class="container">
+                        <h2 class="section-title">Lokasi Acara</h2>
+                        
+                        <div class="map-grid">
+                            <div class="card frame">
+                                <!-- Responsive Map -->
+                                <div class="map-container" style="position:relative; width:100%; padding-bottom:56.25%; height:0; overflow:hidden; border-radius: 12px;">
+                                    <iframe
+                                        title="Lokasi Pawiwahan"
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126748.5621104215!2d115.17671648255625!3d-8.67045820000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2409b0e5e80db%3A0xe27334e8ccb9374a!2sDenpasar%2C%20Kota%20Denpasar%2C%20Bali!5e0!3m2!1sid!2sid!4v1724667759974!5m2!1sid!2sid"
+                                        loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"
+                                        style="border:0; position:absolute; top:0; left:0; width:100%; height:100%;">
+                                    </iframe>
+                                </div>
+
+                                <!-- Info + Button -->
+                                <div style="margin-top: 0.75rem; display: flex; flex-direction: column; gap: 0.5rem; align-items: center;">
+                                    <div style="font-size: 0.8rem; color: var(--muted); text-align: center;">
+                                        Klik tombol di bawah untuk membuka Google Maps.
+                                    </div>
+                                    <a href="https://maps.google.com/?q=-8.356436,115.163861" 
+                                       target="_blank" 
+                                       rel="noreferrer" 
+                                       class="btn">
+                                        <i class="fas fa-map"></i> Buka Maps
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- GALLERY SECTION -->
+        <section class="gallery" id="gallery">
+            <div class="container">
+                <h2 class="section-title">Galeri Prewedding</h2>
+                <p style="text-align: center; margin-bottom: 2rem; color: var(--muted);">Momen kebahagiaan kami</p>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="gambar/bg-8.jpg" alt="Potrait 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="gambar/bg-6.jpg" alt="Potrait 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="gambar/background satu.jpg" alt="Potrait 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="gambar/bg-1.jpg" alt="Potrait 4">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="gambar/bg-2.jpg" alt="Potrait 5">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="gambar/bg-3.jpg" alt="Potrait 6">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="gambar/bg-4.jpg" alt="Potrait 7">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="gambar/bg-5.jpg" alt="Potrait 8">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- VIDEO SECTION -->
+<section class="bg-section bg-2" id="video">
+  <div class="container">
+    <h2 class="section-title">Video Prewedding</h2>
+
+    <div style="display: flex; justify-content: center;">
+      <div style="position: relative; width: 100%; max-width: 400px; aspect-ratio: 9/16; overflow: hidden; border-radius: 12px;">
+        <video 
+          src="video/Prewed.mp4" 
+          controls 
+          autoplay 
+          muted 
+          loop
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+        </video>
+      </div>
+    </div>
+
+    <p style="text-align: center; margin-top: 1rem; color: var(--muted); font-size: 0.85rem;">
+      Video by: <em>Indu</em>
+    </p>
+  </div>
+</section>
+
+
+
+
+        <!-- PESAN SECTION -->
+        <section class="bg-section bg-5" id="pesan">
+            <div class="container" style="max-width: 48rem;">
+                <h2 class="section-title">Pesan & Ucapan</h2>
+
+                <div class="card frame">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                        <i class="fas fa-heart" style="color: var(--gold);"></i>
+                        <h3 class="card-title">Tinggalkan Pesan untuk Mempelai</h3>
+                    </div>
+
+                    <p style="font-size: 0.875rem; color: var(--muted); margin-bottom: 1rem;">
+                        Silakan tulis ucapan selamat atau doa terbaik untuk kedua mempelai. Pesan Anda akan tampil di undangan ini.
+                    </p>
+
+                    <!-- Form Pesan -->
+                    <form id="pesan-form" class="form">
+                        <div class="form-group" style="margin-bottom: 1rem;">
+                            <label for="name" style="display:block; margin-bottom:0.3rem; font-weight:600;">Nama</label>
+                            <input type="text" id="name" name="name" class="form-control"
+                                placeholder="Nama lengkap" required
+                                style="width:100%; padding:0.6rem; border:1px solid #ccc; border-radius:8px; font-size:0.95rem;">
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: 1rem;">
+                            <label for="message" style="display:block; margin-bottom:0.3rem; font-weight:600;">Ucapan</label>
+                            <textarea id="message" name="message" class="form-control" rows="3"
+                                placeholder="Ucapan/doa untuk kedua mempelai" required
+                                style="width:100%; padding:0.6rem; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; resize:none;"></textarea>
+                        </div>
+
+                        <div class="btn-group">
+                            <button type="submit" class="btn" style="padding:0.6rem 1.2rem; border-radius:8px;">
+                                <i class="fas fa-paper-plane"></i> Kirim Pesan
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Daftar Pesan -->
+                <div class="card frame" style="margin-top: 1.5rem;">
+                    <h3 class="card-title">Ucapan dari Tamu</h3>
+                    <div id="pesan-wrapper" style="max-height: 250px; overflow-y: auto; margin-top: 1rem; padding-right: 0.5rem;">
+                        <ul id="pesan-list" style="list-style: none; padding: 0; margin: 0;">
+                            <!-- Pesan akan tampil di sini -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="bg-section bg-1">
+            <div class="container" style="max-width: 48rem;">
+                <div class="divider">
+                    <svg width="52" height="12" viewBox="0 0 52 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M26 0c1.6 3.4 5 6 9 6s7.4-2.6 9-6c-1.6 5.6-6.2 10-11.6 10H19.6C14.2 10 9.6 5.6 8 0c1.6 3.4 5 6 9 6s7.4-2.6 9-6Z" fill="#d4af37"/>
+                    </svg>
+                </div>
+                
+                <p>Terima kasih atas doa dan restu yang telah Bapak/Ibu/Saudara/i berikan.</p>
+                <p>Semoga kebahagiaan dan kedamaian senantiasa menyertai kita semua.</p>
+                
+                <div class="veda-quote" style="margin: 1.5rem 0;">
+                    <p>"Om Shanti Shanti Shanti Om"</p>
+                    <p class="source">Semoga damai di bumi, di langit, dan dalam diri semua makhluk</p>
+                </div>
+                
+                <p style="margin-top: 1rem; font-size: 0.7rem; color: var(--muted);">
+                    &copy; 2025 Undangan Pawiwahan Adat Bali oleh Indu. All rights reserved.
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Music Player -->
+    <div class="music-player no-print" id="musicPlayer">
+        <i class="fas fa-volume-up"></i>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="Music/Backsound.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
